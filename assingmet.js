@@ -1,4 +1,4 @@
-// Problem 1
+
 
 
 function calculateTax(income, expenses) {
@@ -13,7 +13,6 @@ function calculateTax(income, expenses) {
 
  
 
-// problem 2
 
 
 function sendNotification(email) {
@@ -29,7 +28,7 @@ function sendNotification(email) {
     
 }
 
-// problem 3
+
 
 
 function checkDigitsInName(name) {
@@ -47,7 +46,7 @@ function checkDigitsInName(name) {
 
 
 
-// problem 4
+
 
 
 function calculateFinalScore(obj) {
@@ -69,10 +68,21 @@ function calculateFinalScore(obj) {
 
 
 
-// problem 5
 
 
-function  waitingTime(waitingTimes  , serialNumber) {
-    
+
+function  waitingTime(waitingTimes, serialNumber) {
+    if(!waitingTimes == "Array.isArray" || !serialNumber == "number"){
+        return "Invalid Input"
+    }
+    let sum = 0;
+    for(let array of waitingTimes){
+        sum += array;
+    }
+    const average = Math.round(sum / waitingTimes.length);
+     const esRatBefore = serialNumber - 1;
+    const remainingEsRat = esRatBefore - waitingTimes.length;
+    let esRatWaitingTime = remainingEsRat * average;
+    return{average, esRatBefore, remainingEsRat, esRatWaitingTime} ;
 }
 
