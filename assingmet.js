@@ -17,10 +17,17 @@ function calculateTax(income, expenses) {
 
 
 function sendNotification(email) {
+    if (email.includes("@")){
+        userName = email.split("@")[0];
+    domainName = email.split("@")[1];
+    return `${userName} sent you an email from ${domainName}`;
+    }else{
+        return "Invalid Email"
+    }
     
 }
 
-
+console.log(sendNotification("sadia8icloud.com"))
 // problem 3
 
 
