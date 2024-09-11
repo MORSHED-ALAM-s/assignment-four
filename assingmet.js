@@ -2,10 +2,16 @@
 
 
 function calculateTax(income, expenses) {
+    if(income < 0 || expenses < 0 || expenses > income){
+        return "Invalid Input"
+    }else{
+        let result = (income - expenses) *0.20
+    return result;
+    }
     
 }
 
-
+ 
 
 // problem 2
 
